@@ -1,41 +1,44 @@
 # ciclo for
-numeros= [3,5,8,9,12]
-def sumar_numeros(numeros : list) -> int:
+# CICLO FOR - Suma de números
+numeros = [3, 5, 8, 9, 12]
+
+def sumar_numeros(numeros: list) -> int:
     resultado = 0
     for numero in numeros:
-        print(resultado)
-        resultado += numero
+        print(resultado)        # Muestra el resultado antes de sumar
+        resultado += numero     # Acumula la suma
     return resultado
 
-
-# ciclo while 
-def sumar_numeros_while(numeros:list) -> int:
-    resultado=0
-    i=0
-    while i <len (numeros):
-        i +=1
-return resultado
+print(sumar_numeros(numeros))   
 
 
+#  CICLO WHILE  Suma de números 
+def sumar_numeros_while(numeros: list) -> int:
+    resultado = 0
+    i = 0
+    while i < len(numeros):
+        resultado += numeros[i]  
+        i += 1                   
+    return resultado             
 
-    
+print(sumar_numeros_while(numeros))  
 
 
-
-
-def sol(numero)-> int:
-    if numero == 0 or numero== 1:
+#  FACTORIAL RECURSIVO 
+def sol(numero) -> int:
+    if numero == 0 or numero == 1:  
         return 1
-    while numero > 1:
-        
-        return numero * sol(numero-1)
-   print(sol(8))
+    if numero > 1:                  
+        return numero * sol(numero - 1)
+
+print(sol(8))                       
 
 
-
-def factorial(numero)-> int:
+#  FACTORIAL CON FOR 
+def factorial(numero) -> int:
     acumulado = 1
     for i in range(1, numero + 1):
         acumulado *= i
     return acumulado
+
 print(factorial(8))
