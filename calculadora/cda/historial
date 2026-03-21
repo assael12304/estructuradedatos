@@ -1,0 +1,63 @@
+# Historial de Conversación
+
+## Pregunta 1
+**Usuario:** ¿Cómo importo las clases `Motocicleta` y `automovil` en Python?
+
+**Asistente:** Así:
+```python
+from .motocicleta import Motocicleta
+from .automovil import automovil
+```
+
+---
+
+## Pregunta 2
+**Usuario:** ¿Cómo creo una lista vacía para guardar vehículos?
+
+**Asistente:** Con el constructor `__init__`:
+```python
+def __init__(self):
+    self.vehiculos = []
+```
+
+---
+
+## Pregunta 3
+**Usuario:** ¿Cómo agrego un vehículo a la lista según su tipo?
+
+**Asistente:** Verificando el tipo con un `if`:
+```python
+def agregar_vehiculo(self, marca: str, modelo: str, año: int, tipo: str):
+    vehiculo = None
+    if tipo == "Motocicleta":
+        vehiculo = Motocicleta(marca, modelo, año)
+    elif tipo == "automovil":
+        vehiculo = automovil(marca, modelo, año)
+    if vehiculo:
+        self.vehiculos.append(vehiculo)
+```
+
+---
+
+## Pregunta 4
+**Usuario:** ¿Cómo saco el primer vehículo de la cola?
+
+**Asistente:** Con `pop(0)`, que elimina y retorna el primer elemento:
+```python
+def despachar_vehiculo(self):
+    if self.vehiculos:
+        return self.vehiculos.pop(0)
+    return None
+```
+
+---
+
+## Pregunta 5
+**Usuario:** ¿Cómo muestro todos los vehículos de la lista?
+
+**Asistente:** Recorriendo la lista con un `for`:
+```python
+def mostrar_vehiculos(self):
+    for vehiculo in self.vehiculos:
+        print(vehiculo.mostrar_informacion())
+```
