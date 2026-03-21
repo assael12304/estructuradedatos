@@ -1,9 +1,10 @@
-from .vehiculo import Vehiculo
+class Motocicleta:
+    def __init__(self, marca, modelo, anio):
+        self.marca = marca
+        self.modelo = modelo
+        self.anio = anio
+        self.tipo = "Motocicleta"
 
-class Motocicleta(Vehiculo):
-    tipo = "Motocicleta"
-    def __init__(self, marca: str, modelo: str, anio: int):
-        super().__init__(marca, modelo, anio, self.tipo)
-
-    def mostrar_informacion(self) -> str:
-        return f"{super().mostrar_informacion()}"  
+# ---------- Prueba ----------
+m = Motocicleta("Honda", "CB500", 2020)
+print(m.tipo, m.marca, m.modelo, m.anio)
